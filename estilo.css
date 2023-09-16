@@ -1,0 +1,51 @@
+body {
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color de texto blanco */
+    font-family: Arial, sans-serif; /* Tipo de fuente */
+    text-align: center;
+}
+
+h1, p {
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 4px; /* Espaciado entre letras */
+}
+
+h1 {
+    font-size: 36px; /* Tamaño de fuente del título */
+    text-shadow: 2px 2px 4px #ff0000, -2px -2px 4px #00ff00; /* Sombra de texto estilo glitch */
+}
+
+p {
+    font-size: 18px; /* Tamaño de fuente del párrafo */
+    text-shadow: 2px 2px 4px #0000ff, -2px -2px 4px #ffff00; /* Sombra de texto estilo glitch */
+}
+
+img {
+    filter: grayscale(100%); /* Convierte la imagen en escala de grises */
+}
+
+/* Efecto de parpadeo estilo glitch en la página */
+@keyframes glitch {
+    0% {
+        transform: translate(-2px, -2px);
+    }
+    20% {
+        transform: translate(2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(-2px, -2px);
+    }
+    100% {
+        transform: translate(2px, 2px);
+    }
+}
+
+h1, p {
+    animation: glitch 1s infinite;
+}
